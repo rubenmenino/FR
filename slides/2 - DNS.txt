@@ -1,0 +1,28 @@
+1º Criar um dominio (1 e 10 anos)
+2º Registrar nomes e IPs do servidor. (ex: ns1.domain.com - 10.1.1.1)
+3º Definir nomes de servers (minimo 2) para o registo do dominio
+4º Definir zona:
+	| - SDA  
+	| - MX   -> email
+	| - A    -> ipv4
+Registos| - AAAA -> ipv6
+	| - NS   -> NameServers
+	| -
+
+
+
+As respostas recebidas são (podem ser) armazenadas temporariamente na cache (possuem um TTL associado),
+podem ser reutilizadas em consultas futuras para acelerar as respostas.
+O uso do cache melhora a eficiência do sistema, eliminando consultas externas desnecessárias
+
+DNS Iterativo: 
+	- menos eficiente 
+        - aumenta o tempo médio entre uma consulta DNS e sua resposta
+        - responde imediatamente a uma consulta
+	- nao interage com outros DNS
+
+DNS Recursivo:
+	- mais eficiente 
+        - diminui o tempo médio entre uma consulta DNS e sua resposta
+        - cada servidor vê várias consultas de DNS
+	- Mais memória, mais CPU

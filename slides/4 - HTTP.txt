@@ -1,0 +1,45 @@
+HTTP
+
+Conexoes não persistentes - O cliente estabelece uma conexão TCP para enviar a solicitação e o servidor encerra
+                            a conexão TCP após o envio da resposta. Performance lenta.
+
+Conexões persistentes -     O cliente pode usar conexões com pipelining ou sem
+		            Pipelining - envia vários pedidos sem eSperar pela resposta dos anteriores pedidos
+
+200 - OK
+301 - Moved Permanently
+400 - Bad Reqquest
+404 - Not Found
+505 - HTTP Version Not Supported 
+
+Normalmente o browser guarda o username e a passwoord na memória para usar em pedidos de mensagens futuros.
+
+Diminuir os tempos de resposta, e minimizar o tráfego de informação:
+	- Pedidos condicionais (condicional get). Se o conteudo da pagina nao mudou,
+	  nao faz fetch de novo da página inteira. 
+
+	OU ENTAO:
+	
+	 Se um arquivo é armazenado em cache no cliente, o navegador faz uma solicitação
+ 	 com uma linha de cabeçalho do tipo If-modified-since.
+ 	 Se não for modificado, o servidor apenas responderá com um código de resposta 304
+
+
+
+ --- Servidores de proxy --- 
+
+Os conteúdos que ficam armazenados no servidor proxy não têm de ser pedidos ao servidor HTTP novamente, logo a  
+velocidade da ligação é maior. Com isso simultaneamente diminui o número de pedidos, logo diminui também o 
+congestionamento da rede
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+GET - Solicitando recurso do servidor
+POST - enviando um recurso para um servidor (por exemplo, upload de arquivos)
+PUT - como POST, mas substitui um recurso
+DELETE-Excluir um recurso de um servidor
+HEAD - Como GET, mas apenas retorna cabeçalhos e não conteúdo
+OPÇÕES - Obtenha as opções para o recurso
+PATCH - Aplicar modificações a um recurso
+TRACE - Executa o retorno da mensagem

@@ -1,0 +1,30 @@
+Sistema de transmissão pode ser:
+	Guided: um sinal viaja através de um meio físico delimitador. - Cabo de cobre, fibra óptica, ...
+	Unguided: um sinal viaja através de um meio ilimitado - Ar, Água, Vácuo, ... 
+		Direcional: feixe direção especifica
+		Não direcional: feixe emite igualmente em todas as direçoes
+
+Sinais de rádio a antena trasmite um sinal sinosoidal, que irradia no ar/espaço.
+
+
+Analogue-Digital Conversion requere
+	Origem ADC (analogue to digital conversion) - sampling, quantizaion and enconding
+	Destino DAC (Digital to Analogue conversion) - Signal reconstruction
+
+Sampling:
+	- Quantifica o sinal analógico em intervalos de tempo igualmente espaciais.
+	- Capaz de capturar as principais caracteristicas do sinal analogio original
+	- A taca de amostragem determina a quantidade de informação que é transferida para o sinal digital.
+
+Para reconstruir um sinal das amostras, o nº de amostras deve ser alta o suficiente para capturar as informaçoes relevantes do sinal
+
+Transmissao digital:
+	
+	- A transmissão síncrona requer um sinal de relógio entre o remetente e o receptor.
+	- O emissor e receptor da Transmissão Assíncrona não requer um sinal de relógio, mas os blocos de dados devem ter um bit de paridade anexado, 
+	  o que indica o início (bit de início) do novo byte
+	
+Modulação:
+	- Amplitude
+	- Frequencia
+	- Fase

@@ -1,0 +1,58 @@
+https://king.host/blog/2018/02/o-que-e-smtp-imap-e-pop-3-e-qual-a-diferenca/
+
+
+EMAIL
+
+Protocolos de EMAIl:
+	- SMTP: o cliente envia para o servidor, não pode fazer download dos ficheiros 
+		Existe o SMTP MIME que permite distinguir para além de texto
+		em multiplas codificações, ficheiros não texto.
+
+	- POP3: 
+	   ---3 fases---:
+			Autenticação: O usuário envia o username e password
+
+			Transação:    o servidor manda as mensagens para a mailbox,
+				      o usuário decide para cada mensagem se quer
+				      remover ou não da caixa de correio.
+
+			Atualização:  o server remove as mensagens da caixa de
+                                      correio, que o usuário decidiu apagar.
+
+	- IMAP:
+		Coisas importantes:
+			Pesquisa de mensagens por tópico
+			Permite enviar apenas uma parte de uma mensagem
+			Permite o armazenamento de mensagens em pastas, ajudando a organização
+
+	
+		
+		
+		Em uma sessão, o servidor está em um dos quatro estados: 
+			- Status não autenticado: o estado inicial antes do agente do usuário enviar o nome e a senha do usuário.
+		        - Estado autenticado: o agente do usuário deve identificar um diretório antes de enviar qualquer comando que afeta as mensagens de email.
+		        - Status selecionado: o agente do usuário pode enviar comandos de gerenciamento de mensagens (exibir, remover, transferir, etc.).
+     	 	        - Status de logout: quando a sessão termina.
+			
+			
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+No mesmo e-mail como é possível transmitir e distinguir vários tipos de informação enviada? Qual o
+protocolo responsável por esta funcionalidade? Justifique. (2 valores)
+
+	- O protocolo responsável é o SMTP, utilizando o standard MIME que permite distinguir para além de texto
+	 em múltiplas codificações, ficheiros não texto.
+
+
+IMAP:
+	
+
+
+

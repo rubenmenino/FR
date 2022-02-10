@@ -1,0 +1,42 @@
+TFTP: use UDP - stop and wait
+	- Read Request
+	- Write Request
+	- Data
+	- ACK
+	- Error
+Todos os pacotes têm 512 bytes de dados menos o último´~
+
+ ----------------------------------------------------------------
+
+FTP: use TCP
+
+	Dois modos de transferência:
+		- Ativo:   o servidor abre a conexão de dados TCP com um endereço do cliente e uma porta (efêmera),
+		           anunciada pelo cliente usando um comando PORT.
+		- Passivo: o cliente abre a conexão de dados TCP com um endereço do servidor e uma porta (efêmera), 
+			   anunciada pelo servidor em uma resposta "227" a um comando PASV enviado pelo cliente.
+
+Respostas do servidor (códigos):
+
+
+200 - O pedido foi completo 
+220 - Pronto para novo utilizador
+221 - Fechar a conexão de controlo
+226 - Fechar transferencia de dados. Bem completo
+227 - Entra em modo passivo
+230 - Utilizador logado
+231 - Username OK, falta password
+125 - A conexão de dados já abre a tranferencia 
+150 - status do arquivo está bom, prestes a abrir
+425 - Não é possive labrir conexão de dados
+452 -  Erro ao gravar arquivo
+
+-----------------------------------------------------------------
+
+No download de um ficheiro de dados como é que o FTP e o TFTP têm informação de que este
+chegou ao fim? Justifique. (1.5 valores)
+
+
+TFTP -> Envio de um segmento com tamanho menor do que 512 bytes
+FTP -> Mensagem 226: Transfer Complete
+

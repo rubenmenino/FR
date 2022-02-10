@@ -1,0 +1,33 @@
+http://www.steves-internet-guide.com/tcp-vs-udp/
+
+
+UDP
+	 - utiliza ip e portos de receção para direcionar o segmento para o correto socket
+	 - UDP é melhor para serviços multicast, onde é necessário enviar  uma emissão para vários recetores
+	 - Não ordena
+	 - Não tem recuperação de mensagens
+
+
+
+
+
+TCP 
+	- utiliza ip e portos de receção para direcionar o segmento para o correto socket
+
+	TCP(perdas de informação)
+		- Timeout: Depois de algum tempo, nenhum ACK é recebido para esse segmento de dados
+			ºCaso o emissor nao recebo o ACK irá reenviar os segmentos, e a janela será definida
+			em 1 mss, entrando em sistema slow-start. O threshold será definido em metade do 
+		        valor previamente usado para a janela de congestionamento.
+
+
+		- Fast Retransmit/Recovery: Após o recebimento de 3 ou mais ACKs duplicados para o
+					    segmento de dados anterior. 
+
+	A maneira como o tamanho CWND varia depende de algoritmos TCP:
+		- Tahoe: Fast Restransmit, Slow Start and Congestion Service
+		- Reno: Use Fast Recovery and Congestion Avoidence
+
+MSS- máximo que consegue transmitir
+Sequence Number - posiçao do primeiro byte de dados do segmento
+ACK - vaslor do seguinte sequence number
